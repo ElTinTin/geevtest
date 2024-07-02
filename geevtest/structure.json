@@ -1,0 +1,47 @@
+{
+  "screen": {
+    "structure": {
+      "header": {
+        "components": [
+          {
+            "id": "logo-geev",
+            "type": "logo"
+          },
+          {
+            "id": "search",
+            "type": "search",
+            "placeholder": "Rechercher un objet"
+          }
+        ]
+      },
+      "body": {
+        "sections": [
+          {
+            "id": "news",
+            "title": "Les news geev",
+            "components": [
+              {
+                "id": "actualities",
+                "type": "news"
+              }
+            ]
+          },
+          {
+            "id": "exclusivities",
+            "title": "Section exclusivités",
+            "components": [
+              {
+                "id": "exclusivities",
+                "type": "carrousel"
+              },
+              {
+                "id": "exclusivities-2",
+                "type": "carrousel"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
