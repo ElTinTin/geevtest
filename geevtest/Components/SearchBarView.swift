@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct SearchBarView: View {
+    @Binding var text: String
+    var placeholder: String
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+
+            TextField(placeholder, text: $text)
+                .padding(7)
+                .padding(.horizontal, 25)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal, 10)
+
+            Button(action: {
+                // TODO
+            }) {
+                Text("Search")
+            }
+            .padding(.horizontal, 16)
+            .transition(.move(edge: .trailing))
+        }
     }
 }
-
 #Preview {
-    SearchBarView()
+    SearchBarView(text: .constant(""), placeholder: "Search")
 }

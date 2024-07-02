@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct NewsView: View {
+    var text: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(text)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.gray.opacity(0.5))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .foregroundStyle(.white)
+                .font(.headline)
+            Text(text)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.gray.opacity(0.5))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .foregroundStyle(.white)
+                .font(.headline)
+            Text(text)
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.gray.opacity(0.5))
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .foregroundStyle(.white)
+                .font(.headline)
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 
 #Preview {
-    NewsView()
+    NewsView(text: "This a text demo.")
 }
